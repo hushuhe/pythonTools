@@ -1,0 +1,1 @@
+alias note="/C/Program\ Files/Notepad++/notepad++.exe"
