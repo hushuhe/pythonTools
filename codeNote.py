@@ -12,4 +12,16 @@ def ti(a):
     timeArray = time.strptime(a, "%Y-%m-%d %H:%M:%S")
     otherStyleTime = time.strftime("%Y/%m/%d %H:%M:%S", timeArray)
     return otherStyleTime
+    
+ #将时间戳转化为字符串
+def ti2(a):
+    x = time.localtime(a)
+    return time.strftime('%Y-%m-%d %H:%M:%S',x)
+
+#===========================decode==========================
+import sys
+ty=sys.getfilesystemencoding()
+
+
 #==========================TIME END========================================
+cook_str='sessionid=dbe959086b7f2922e4c23416a020a818; csrftoken=ylOSHezRJzSIzoxcjil9oHIu9cNzCEX8'
