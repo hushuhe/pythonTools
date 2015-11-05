@@ -1,4 +1,7 @@
+# -*- coding: cp936 -*-
 import time
+import sys
+ty=sys.getfilesystemencoding()
 #==========================TIME相关========================================
 #将字符串的时间转换为时间戳
 def timestamp(a):
@@ -17,11 +20,23 @@ def ti(a):
 def ti2(a):
     x = time.localtime(a)
     return time.strftime('%Y-%m-%d %H:%M:%S',x)
-
-#===========================decode==========================
-import sys
-ty=sys.getfilesystemencoding()
-
-
-#==========================TIME END========================================
+#===========================function==========================
+def changeNum(i):
+    dict2 = {'0':'零','1':'一','2':'二','3':'三','4':'四','5':'五','6':'六','7':'七','8':'八','9':'九'}
+    result = ''
+    #print i
+    for x in str(int(i)):
+        if dict2.has_key(x):
+            result += dict2[x]
+        else:
+            result += str(x)
+    return result
+def getLastZb(i):
+    i= i.strip().split('\t')
+    return i[0],i[1],i[2],i[-1]
+ #==========================TIME END========================================       
 cook_str='sessionid=dbe959086b7f2922e4c23416a020a818; csrftoken=ylOSHezRJzSIzoxcjil9oHIu9cNzCEX8'
+
+i = 103104517052861508046282207214545477744
+
+print changeNum(i)
